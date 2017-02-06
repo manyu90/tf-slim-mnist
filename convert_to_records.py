@@ -31,7 +31,7 @@ TEST_IMAGES = 't10k-images-idx3-ubyte.gz'
 TEST_LABELS = 't10k-labels-idx1-ubyte.gz'
 
 
-tf.app.flags.DEFINE_string('directory', '/tmp/data',
+tf.app.flags.DEFINE_string('directory', '/Users/abhimanyu/Dropbox/Documents/Research/Winter_2017_Kundaje_lab/Tutorials/tf-slim-mnist/data/',
                            'Directory to download data files and write the '
                            'converted result')
 tf.app.flags.DEFINE_integer('validation_size', 5000,
@@ -79,8 +79,7 @@ def main(argv):
   # Get the data.
   data_sets = mnist.read_data_sets(FLAGS.directory,
                                    dtype=tf.uint8,
-                                   reshape=False,
-                                   validation_size=FLAGS.validation_size)
+                                   reshape=False)
 
   # Convert to Examples and write the result to TFRecords.
   convert_to(data_sets.train, 'train')

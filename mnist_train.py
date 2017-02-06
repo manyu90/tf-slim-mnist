@@ -3,7 +3,7 @@ import tensorflow.contrib.slim as slim
 from mnist import inputs, lenet
 
 flags = tf.app.flags
-flags.DEFINE_string('train_dir', '/tmp/data',
+flags.DEFINE_string('train_dir', '/Users/abhimanyu/Dropbox/Documents/Research/Winter_2017_Kundaje_lab/Tutorials/tf-slim-mnist/data/',
                     'Directory with the training data.')
 flags.DEFINE_integer('batch_size', 5, 'Batch size.')
 flags.DEFINE_integer('num_batches', None, 'Num of batches to train (epochs).')
